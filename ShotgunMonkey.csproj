@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>ShotgunMonkey</RootNamespace>
+        <Configurations>Debug;Release</Configurations>
+        <Nullable>enable</Nullable>
+        <AssemblyName>ShotgunMonkey</AssemblyName>
+        <LangVersion>latest</LangVersion>
+        <Optimize>False</Optimize>
+        <DebugType>embedded</DebugType>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Remove="ShotgunMonkey-Icon.png" />
+      <None Remove="ShotgunMonkey-Portrait.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Tower\" />
+    </ItemGroup>
+
+    <Import Project="..\btd6.targets" />
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="copy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;D:\ProgramFiles\Steam\steamapps\common\BloonsTD6\Mods&quot; /y" />
+    </Target>
+</Project>
