@@ -19,7 +19,12 @@ A Bloons Tower Defense 6 mod that adds a new tower, the shotgun monkey, complete
 ## Install
 [Requires MelonLoader](https://github.com/LavaGang/MelonLoader) and [BTD6 Mod Helper](https://github.com/gurrenm3/BTD-Mod-Helper#readme)
 
+Download the release ShotgunMonkey.dll and drag into the steamapps/common/BloonsTD6/Mods folder
 
+## ToDo
+- Add ability icons, projectile effects, and custom textures for monkey upgrades
+- Add paragon
+- Tweak balance if needed
 
 
 
